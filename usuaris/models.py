@@ -24,9 +24,6 @@ class perfil(models.Model):
 	def __unicode__(self):
 		return self.correu
 
-	def __str__(self):
-		return self.correu
-
 	class Meta:
 		ordering=['correu']
 		verbose_name_plural= 'Dades addicionals'
