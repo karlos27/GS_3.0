@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="slider">
+  <img src="{% static 'img/cap.jpg' %}" class="img-responsive" alt="Gestoria">
+</div><br>
+<div class="container-fluid">
+	<div class="container" id="carro_t">
+    	<h1 class="display-1"><strong>Els nostres serveis</strong></h1>
+  	</div><br>
+  	<div class="container-fluid">
+	  	<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+				<div class="panel panel-primary">
+		 			<div class="panel-heading"><strong>Trucan's i t'atendrem!</strong></div>
+		   			<div class="panel-body"><h3>973 30 30 30</h3></div>            
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="carro">
+			{% include 'carousel.html' %}
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+				<div class="panel panel-primary">
+		  			<div class="panel-heading"><strong>Horari</strong></div>
+		    			<div class="panel-body">
+		            		<ul>
+		                		<dl>
+		                  			<dt> De Dilluns a Divendres</dt>
+		                  			<dt> De 09:00h a 13:00h i de 17:00h a 20:00h</dt>
+		                  			<dt> Caps de setmana i festius tancat</dt>
+		                		</dl>
+		              		</ul>
+		    			</div>
+					</div>
+				</div>
+			</div>
+		</div><br>
+		<div class="container-fluid" id="noticies">
+			<div class="container" id="noticies_t">
+				<h1><strong>Últimes notícies</strong></h1>
+			</div>
+			{% if noticies %}
+				{% for noticies in noticies %}
+				<div class="container" id="noticies_x">
+					<h1>{{ noticies.titol }}</h1>
+					<h4>{{ noticies.data_pub }}</h4>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<a href="{{ noticies.font }}"><img src="{{ noticies.foto.url }}" class="img-responsive" alt="" id="im"></a>
+						</div>
+						<div class="col-sm-6 col-md-8">
+							<p>{{ noticies.cos|safe }}<a href="{{ noticies.font }}"><strong> (Llegir més...)</strong></a></p>
+						</div>
+					</div>
+				</div><br>	
+				{% endfor %}
+			{% endif %}
+		</div>
+		<div class="container" id="retorn">
+    		<a href="/"><button type="button" class="btn btn-danger" aria-label="Left Align"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button></a>
+		</div><br>
+</div>
+{% include 'footer.html' %}
+{% endblock %}

@@ -1,0 +1,165 @@
+body{
+	background-color: rgb(240,234,214);	
+}
+.slider img {
+	width: 100%;
+	height: auto;
+}
+
+#logo {
+	width: 50px;
+	height: auto;
+	margin: 5px;
+}
+
+#carro_t {
+	text-align: center;
+}
+
+#carro {
+	width: 50%;
+	height: auto;
+}
+
+#carro h1, h3 {
+	color: rgb(0,0,0); 
+}
+
+#car2{
+	margin-bottom: 15px;
+}
+
+.carousel {
+	color: rgb(0,0,0);
+}
+
+#noticies {
+	background-color: rgb(240,234,214);
+	text-align: center;
+}
+
+#noticies_x {
+	border-bottom: solid 1px rgb(192,192,192);
+	padding-bottom: 50px;
+}
+
+#noticies_t{
+	border-bottom: solid 1px rgb(192,192,192);
+}
+
+#im {
+	border-radius: 8px;
+	border: solid black 1px;
+}
+
+#retorn button{
+	border: solid black 1px;
+	margin-left: 98%;
+}
+
+#footer {
+	background-color: rgb(215, 208, 193);
+	border-top: solid rgb(255,0,0) 2px;
+	width: 100%;
+	height: 150px;
+	padding: 20px;
+	position: absolute;
+	bottom: 0;
+}
+
+#footer a {
+	text-decoration: none;
+	
+}
+
+.subline{
+	padding-top: 1px;
+}
+
+.subline_in {
+	border-top: solid rgb(128, 128, 128) 1px;
+}
+
+#entrar, h1{
+	padding-top: 80px;
+	text-align: center;
+}
+
+#registre{
+	padding-top: 100px;
+}
+
+#tot{
+	width: 100%;
+	height: 100%;
+	margin-top: 12%;
+}
+
+#nom{
+	margin-left: 15px;
+}
+
+#bot, #bot1 {
+	margin: 7%;
+}
+#bot2  {
+	margin: 3%;
+}
+
+#contact, #perfil, #news{
+	padding-top: 30px;
+	padding-bottom: 15px;
+}
+
+#contact, #perfil, #news h2{
+	font-family: arial;
+
+}
+#news h1{
+	border-bottom: solid 1px rgb(192,192,192);
+}
+
+
+#info{
+	padding-top: 125px;
+}
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#resposta{
+	margin-top: 180px;
+
+}
+#resposta_in{
+	border-radius: 4px;
+	box-sizing: border-box;
+	border: solid black 1px;
+	background-color: rgb(250,250,250);
+	font-family: arial;
+	text-align: center;
+	font-size: 25px;
+	width: 100%;
+	height: auto;
+	padding: 5px;
+}
+#resposta_a{
+	margin-top: 200px;
+	text-align: center;
+	font-size: 15px;
+	
+}
+#resposta_a a{
+	text-decoration: none;
+}

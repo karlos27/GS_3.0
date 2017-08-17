@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container">
+	<h1>Descàrregues</h1>
+		{% if object_list %}
+			{% for llista in object_list %}
+				<a href="{{ llista.arx_1.url }}" class="list-group-item">{{ llista.nom_1 }} - {{ llista.data_pub }}</a>
+			{% endfor %}
+		{% else %}
+			<p>No hi ha arxius pendents de descàrrega</p>
+		{% endif %}
+	{% include 'paginator.html' %}
+</div>
+{% include 'footer.html' %}
+{% endblock %}

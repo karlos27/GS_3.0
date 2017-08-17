@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="container-fluid" id="info">
+  <div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="thumbnail">
+      			<img src="{% static 'img/rell.jpg' %}" alt="...">
+      			<div class="caption">
+        			<h3>Horaris</h3>
+        			<p><strong>De Dilluns a Divendres</strong></p>
+        			<p><strong>De 09:00h a 13:00h i de 17:00h a 20:00h</strong></p>
+        			<p><strong>Caps de setmana i festius tancat</strong></p>
+        			<p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Vés al mapa</button></p>
+      			</div>
+       		</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="thumbnail">
+      			<img src="{% static 'img/per.jpg' %}" alt="...">
+      			<div class="caption">
+        			<h3>Dades d'Interès</h3>
+        			<p><strong>Telèfon:</strong> 99999999</p>
+        			<p><strong>Adreça:</strong> c/Mallorza</p>
+        			<p><strong>Població:</strong> BCN</p>
+        			<p><a href="{% url 'gestoria:contacte' %}" class="btn btn-primary" role="button">Contacte</a></p>
+        		</div>
+        	</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="thumbnail">
+      			<img src="{% static 'img/enl_1.jpg' %}" alt="...">
+      			<div class="caption">
+        			<h3>Enllaços</h3>
+        				<p><a href="http://www.agenciatributaria.es/">Agència Tributària</a></p>
+        				<p><a href="http://web.gencat.cat/ca/inici/">Gencat</a></p>
+        				<p><a href="https://www.google.es/">Google</a></p>
+        		</div>
+        	</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Mapa</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="embed-container">
+        	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2992.6395380275276!2d2.1721618!3d41.4036339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2dcd83dfb93%3A0x9bd8aac21bc3c950!2sBas%C3%ADlica+de+la+Sagrada+Fam%C3%ADlia!5e0!3m2!1ses!2ses!4v1501092165758" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tancar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% include 'footer.html' %}
+{% endblock %}

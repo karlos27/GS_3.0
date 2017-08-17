@@ -1,0 +1,107 @@
+.slider img {
+	width: 100%;
+	height: auto;
+}
+
+#logo {
+	width: 50px;
+	height: auto;
+	margin: 5px;
+}
+
+#carro_t {
+	text-align: center;
+}
+
+#carro {
+	width: 50%;
+	height: auto;
+}
+
+#carro h1, h3 {
+	color: rgb(0,0,0); 
+}
+
+.carousel {
+	color: rgb(0,0,0);
+}
+
+#noticies {
+	background-color: rgb(250,250,250);
+	text-align: center;
+}
+
+#noticies_x {
+	border-bottom: solid 1px rgb(192,192,192);
+	padding-bottom: 50px;
+}
+
+#noticies_t{
+	border-bottom: solid 1px rgb(192,192,192);
+}
+
+#im {
+	border-radius: 8px;
+	border: solid black 1px;
+}
+
+#retorn button{
+	border: solid black 1px;
+}
+
+#footer {
+	background-color: rgb(192,0,0);
+	width: 100%;
+	height: 100%;
+	padding-top: 40px;
+}
+
+#footer img{
+	width: 100px;
+	height: auto;
+}
+
+#footer a, h4, dt {
+	text-decoration: none;
+	color: rgb(0,0,0);
+}
+
+#footer hr {
+	border: solid 1px #000000;
+}
+
+#entrar, h1{
+	padding-top: 80px;
+	text-align: center;
+}
+
+#registre{
+	padding-top: 100px;
+}
+
+#top{
+	width: 100%;
+	height: 100%;
+	margin-top: 7%;
+	margin-left: 10%;
+	
+}
+
+#tot{
+	width: 100%;
+	height: 100%;
+	margin-top: 3%;
+}
+
+#bot {
+	margin-left: 55%;
+}
+
+#bot1{
+	margin: 1%;
+}
+
+#bot2 {
+	margin-left: 73%;
+	margin-bottom: 1%;
+}

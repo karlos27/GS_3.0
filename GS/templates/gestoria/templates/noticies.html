@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="container" id="news">
+	<h1><strong>Llistat de Notícies</strong></h1>
+		{% if object_list %}
+			{% for llista in object_list %}
+				<div class="container" id="noticies_x">
+					<h2>{{ llista.titol }}</h2>
+					<h4>{{ llista.data_pub }}</h4>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4 lg-4">
+							<a href="{{ llista.font }}"><img src="{{ llista.foto.url }}" class="img-responsive" alt="" id="im"></a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-8 lg-8">
+							<p>{{ llista.cos|safe }}<a href="{{ llista.font }}"><strong> (Llegir més...)</strong></a></p>
+						</div>
+					</div>
+				</div><br>	
+			{% endfor %}
+		{% endif %}
+	{% include 'paginator.html' %}
+</div>
+
+
+
+{% endblock %}

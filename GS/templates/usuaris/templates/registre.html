@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+   {% block content %}
+   	<div class="container">
+   		<div class="row">
+	   		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	   		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+	   		<div class="container-fluid" id="registre">
+				<div class="panel panel-success">
+					<div class="panel-heading">
+					   	<h3 class="panel-title">Registre Usuari</h3>
+					</div>
+					<div class="panel-body">
+						<form method="POST">{% csrf_token %}
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+									<div class="form-group">
+										<input type="text" class="form-control" name="username" placeholder="Usuari">
+										<p>Obligatori. 150 o menys caràcters. Només lletres, dígits i @/./+/-/_.</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+									<div class="form-group">
+										<input type="text" class="form-control" name="first_name" placeholder="Nom">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+									<div class="form-group">
+										<input type="text" class="form-control" name="last_name" placeholder="Cognoms">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+									<div class="form-group">
+										<input type="text" class="form-control" name="email" placeholder="@">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+									<div class="form-group">
+										<input type="password" class="form-control" name="password1" placeholder="Contrasenya">
+										<ul>
+											<li>La contrasenya no pot ser massa similar a la vostra altra informació personal.</li>
+											<li>La contrasenya és ha de tenir un mínim de 8 caràcters.</li>
+											<li>La contrasenya no pot ser una de les habitualment utilitzades.</li>
+											<li>La contrasenya no pot estar formada només per números.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+									<div class="form-group">
+										<input type="password" class="form-control" name="password2" placeholder="Confirmar Contrasenya">
+										<p>Introduïu la mateixa contrasenya d'abans, com a verificació.</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+									<button type="submit">Acceptar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+		</div>
+	</div>    
+    {% endblock %}    
+    

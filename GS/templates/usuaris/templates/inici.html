@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div id="tot">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h3 id="nom"><strong>Benvingut, {{ user.username }}!</strong></h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  <div class="panel panel-default">
+			    <div class="panel-heading" role="tab" id="headingOne">
+			      <h4 class="panel-title">
+			        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			          Menú
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+			      <div class="panel-body">
+			        Estem molt contents que t'hagis registrat a la nostra web. A partir d'ara, podràs fer gestions de manera més ràpida. Entre altres coses, no només et podràs posar en contacte amb nosaltres mitjançant la nostra plana web, sinó que a més a més, podràs descarregar-te arxius com ara nòmines, permisos, etc... o perquè no, estar informat de l'actualitat relacionada amb el món laboral i fiscal. 
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading" role="tab" id="headingTwo">
+			      <h4 class="panel-title">
+			        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			          Dades personals
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+			      <div class="panel-body">
+			        T'animem a que actualitzis les teves dades personals, ja que d'aquesta manera, podrem conèixer de primera mà tota aquella informació important relacionada amb els tràmits que necessitis. Ens hi posem??
+			      </div>
+			      <div class="row">
+			      	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			      		<a href="{% url 'usuaris:perfil' %}" class="btn btn-success" target="_self" id="bot";">Actualitzar dades</a>
+			      	</div>
+			      	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			      		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Finestra" id="bot1">Veure Perfil</button>
+			      	</div>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading" role="tab" id="headingThree">
+			      <h4 class="panel-title">
+			        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			          Descàrregues
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+			      <div class="panel-body">
+			        L'apartat de descàrregues és sens dubte, un dels nostres puntals en el portal de xxxxx a internet, ja que permet descarregar tota mena d'arxius de manera ràpida, còmoda i segura.
+			      </div>
+			      <div class="row">
+			      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			      		<a href="{% url 'usuaris:descarregues' %}" class="btn btn-success" target="_self" id="bot2";">Accedir als arxius</a>
+			      	</div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="car2">
+			{% include 'carousel.html' %}	
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="Finestra" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Perfil Usuari</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="container">
+      		<h4><strong>Usuari: </strong><p>{{ user.username }}</p></h4>
+			<h4><strong>Nom Complert: </strong><p>{{ user.last_name }}, {{ user.first_name }}</p></h4>
+			<h4><strong>Correu electrònic: </strong><p>{{ user.perfil.correu }}</p></h4>
+			<h4><strong>NiF: </strong><p>{{ user.perfil.nif }}</p></h4>
+			<h4><strong>Adreça: </strong><p>{{ user.perfil.direcc }}</p></h4>
+			<h4><strong>Ciutat: </strong><p>{{ user.perfil.pobl }}</p></h4>
+			<h4><strong>Telf.: </strong><p>{{ user.perfil.telf_1 }}</p></h4>
+			<h4><strong>Fax: </strong><p>{{ user.perfil.fax }}</p></h4>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">D'acord</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
