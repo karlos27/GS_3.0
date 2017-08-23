@@ -16,7 +16,6 @@ from django.contrib.auth.models import User
 
 class perfil(models.Model):
 	nom_usuari = models.OneToOneField(User, on_delete=models.CASCADE)
-	correu = models.EmailField('@')
 	nif = models.CharField('NiF', max_length=9, blank= True, null=True)
 	direcc = models.CharField('Adreça', max_length=100)
 	pobl = models.CharField('Ciutat', max_length=9, blank= True, null=True)
@@ -24,13 +23,13 @@ class perfil(models.Model):
 	fax = models.CharField('Fax', max_length=9, blank= True, null=True)
 	
 	def __unicode__(self):
-		return self.correu
+		return self.nif
 
 	def __str__(self):
-		return self.correu
+		return self.nif
 
 	class Meta:
-		ordering=['correu']
+		ordering=['nom_usuari']
 		verbose_name_plural= 'Dades addicionals'
 
 @receiver(post_save, sender=User)

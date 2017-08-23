@@ -15,20 +15,20 @@ class RegistreForm(UserCreationForm):
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ('first_name', 'last_name')
-        labels = {'first_name':'Nom', 'last_name':'Cognoms',}
+        fields = ('first_name', 'last_name', 'email',)
+        labels = {'first_name':'Nom', 'last_name':'Cognoms', 'email':'Correu Electrònic Principal',}
         widgets = {
         	'first_name':forms.TextInput(attrs={'class':'form-control'}),
         	'last_name':forms.TextInput(attrs={'class':'form-control'}),
+            'email':forms.TextInput(attrs={'class':'form-control'}),
         }
 
 class PerfilForm(forms.ModelForm):
 	class Meta:
 		model = perfil
-		fields = ('correu', 'nif', 'direcc', 'pobl', 'telf_1', 'fax',)
-		labels = {'correu':'Correu', 'nif':'NiF', 'direcc':'Direcció', 'pobl':'Ciutat', 'telf_1':'Tel.', 'fax':'Fax',}
+		fields = ('nif', 'direcc', 'pobl', 'telf_1', 'fax',)
+		labels = {'nif':'NiF', 'direcc':'Direcció', 'pobl':'Ciutat', 'telf_1':'Tel.', 'fax':'Fax',}
 		widgets = {
-        	'correu':forms.TextInput(attrs={'class':'form-control'}),
             'nif':forms.TextInput(attrs={'class':'form-control'}),
         	'direcc':forms.TextInput(attrs={'class':'form-control'}),
         	'pobl':forms.TextInput(attrs={'class':'form-control'}),

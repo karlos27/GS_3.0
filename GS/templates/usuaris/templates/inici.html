@@ -4,10 +4,10 @@
 {% block content %}
 {% include 'navbar.html' %}
 
-<div id="tot">
+<div id="menu-inici">
 	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<h3 id="nom"><strong>Benvingut, {{ user.username }}!</strong></h3>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="menu-inici-nom">
+			<h3><strong>Benvingut, {{ user.username }}!</strong></h3>
 		</div>
 	</div>
 	<div class="row">
@@ -23,7 +23,7 @@
 			    </div>
 			    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 			      <div class="panel-body">
-			        Estem molt contents que t'hagis registrat a la nostra web. A partir d'ara, podràs fer gestions de manera més ràpida. Entre altres coses, no només et podràs posar en contacte amb nosaltres mitjançant la nostra plana web, sinó que a més a més, podràs descarregar-te arxius com ara nòmines, permisos, etc... o perquè no, estar informat de l'actualitat relacionada amb el món laboral i fiscal. 
+			        A xxxx, estem molt contents que t'hagis registrat a la nostra web. A partir d'ara, podràs fer gestions de manera més ràpida. Entre altres coses, no només et podràs posar en contacte amb nosaltres mitjançant la nostra plana web, sinó que a més a més, podràs descarregar-te arxius com ara nòmines, permisos, etc... o perquè no, estar informat de l'actualitat relacionada amb el món laboral i fiscal. 
 			      </div>
 			    </div>
 			  </div>
@@ -40,11 +40,11 @@
 			        T'animem a que actualitzis les teves dades personals, ja que d'aquesta manera, podrem conèixer de primera mà tota aquella informació important relacionada amb els tràmits que necessitis. Ens hi posem??
 			      </div>
 			      <div class="row">
-			      	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-			      		<a href="{% url 'usuaris:perfil' %}" class="btn btn-success" target="_self" id="bot";">Actualitzar dades</a>
+			      	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="data-button">
+			      		<a href="{% url 'usuaris:perfil' %}" class="btn btn-primary btn-block" target="_self">Actualitzar dades</a>
 			      	</div>
-			      	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-			      		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#Finestra" id="bot1">Veure Perfil</button>
+			      	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="profile-button">
+			      		<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#Finestra">Veure Perfil</button>
 			      	</div>
 			      </div>
 			    </div>
@@ -62,19 +62,21 @@
 			        L'apartat de descàrregues és sens dubte, un dels nostres puntals en el portal de xxxxx a internet, ja que permet descarregar tota mena d'arxius de manera ràpida, còmoda i segura.
 			      </div>
 			      <div class="row">
-			      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			      		<a href="{% url 'usuaris:descarregues' %}" class="btn btn-success" target="_self" id="bot2";">Accedir als arxius</a>
+			      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="download-button">
+			      		<a href="{% url 'usuaris:descarregues' %}" class="btn btn-primary btn-block" target="_self">Accedir als arxius</a>
 			      	</div>
 			      </div>
 			    </div>
 			  </div>
 			</div>
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="car2">
-			{% include 'carousel.html' %}	
+		<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">		
 		</div>
 	</div>
 </div>
+
 <!-- Modal -->
 <div class="modal fade" id="Finestra" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog modal-lg" role="document">
