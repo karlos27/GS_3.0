@@ -21,7 +21,7 @@ class RegistreUsuari(CreateView):
 	model = User
 	template_name = 'usuaris/templates/registre.html'
 	form_class = RegistreForm
-	success_url = reverse_lazy('login')
+	success_url = reverse_lazy('usuaris:registre_up')
 
 @login_required
 @transaction.atomic
@@ -32,7 +32,6 @@ def Perfil(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            messages.success(request, '%(correu)s, ha actualitzat el seu perfil!')
             return redirect('usuaris:inici')
     else:
         user_form = UserForm(instance=request.user)
@@ -44,6 +43,9 @@ def Perfil(request):
 
 def inici(request):
 	return render(request, 'usuaris/templates/inici.html', {})
+
+def registre_up(request):
+    return render(request, 'usuaris/templates/registre_up.html', {})
 
 class descarregues(ListView):
     template_name = 'usuaris/templates/descarregues.html'

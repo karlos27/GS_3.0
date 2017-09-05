@@ -13,18 +13,20 @@
 			<h2 class="slider-data-title"><strong>Nom Company, SL</strong></h2>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-			<h2 class="slider-data-title"><strong>Trucan's i t'atendrem.</strong></h2>
-			<h3 class="slider-data-title"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 973 30 30 30</h3>            
+			<h4 class="slider-data-title"><strong>Trucan's i t'atendrem.</strong></h4>
+			<h5 class="slider-data-title"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 973 30 30 30</h5>            
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-			<h2 class="slider-data-title"><strong>Horari</strong></h2>
-			    <ul class="slider-data-title">
-		            <dl>
-		              	<dt> De Dilluns a Divendres</dt>
-		              	<dt> De 09:00h a 13:00h i de 17:00h a 20:00h</dt>
-		              	<dt> Caps de setmana i festius tancat</dt>
-		            </dl>
-		        </ul>	 
+			<h4 class="slider-data-title"><strong>Horari</strong></h4>
+			 <h5>
+			 	<ul class="slider-data-title">
+		           <dl>
+		           		<dt> De Dilluns a Divendres</dt>
+	              		<dt> De 09:00h a 13:00h i de 17:00h a 20:00h</dt>
+	              		<dt> Caps de setmana i festius tancat</dt>
+		           </dl>
+		        </ul>
+		     </h5>
 		</div>
 	</div>
 </div>
@@ -39,8 +41,8 @@
 		</div>
 			{% if noticies %}
 				{% for noticies in noticies %}
-				<div class="container" id="news-list-body">
-					<h1>{{ noticies.titol }}</h1>
+				<div class="container" id="list-body">
+					<h2>{{ noticies.titol }}</h2>
 					<h4>{{ noticies.data_pub }}</h4>
 					<div class="row">
 						<div class="col-sm-6 col-md-4">

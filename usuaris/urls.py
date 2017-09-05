@@ -7,5 +7,6 @@ urlpatterns = [
 	url(r'^registre/', RegistreUsuari.as_view(), name='registre'),
 	url(r'^perfil/', views.Perfil, name='perfil'),
 	url(r'^inici/', views.inici, name='inici'),
+	url(r'^registre_up/', views.registre_up, name='registre_up'),
 	url(r'^descarregues/', descarregues.as_view(), name='descarregues'),
 	]

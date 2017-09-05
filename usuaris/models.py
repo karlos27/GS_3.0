@@ -23,10 +23,10 @@ class perfil(models.Model):
 	fax = models.CharField('Fax', max_length=9, blank= True, null=True)
 	
 	def __unicode__(self):
-		return self.nif
+		return self.nom_usuari.username
 
 	def __str__(self):
-		return self.nif
+		return self.nom_usuari.username
 
 	class Meta:
 		ordering=['nom_usuari']

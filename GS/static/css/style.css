@@ -2,7 +2,12 @@
 
 body {
 	font-family: arial;
-	background-color: rgb(255, 246, 173);	
+	background-color: rgb(255, 246, 173);
+}
+
+h1 {
+	padding-top: 80px;
+	text-align: center;
 }
 
 /*! Capçalera */
@@ -39,7 +44,7 @@ body {
 
 .slider-data-title {
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 /*! Carousel */
@@ -61,9 +66,32 @@ body {
 	border-bottom: solid 2px rgb(130,0,0);
 }
 
+#list-body {
+	border-bottom: solid 2px rgb(130,0,0);
+	padding-bottom: 50px;
+	color: rgb(0,0,0);
+}
+
+#list-body p {
+	font-size: 175%;
+}
+
+#list-body a {
+	color: rgb(0,0,0);
+}
+
 #news-list-body {
 	border-bottom: solid 2px rgb(130,0,0);
 	padding-bottom: 50px;
+	color: rgb(255,255,255);
+}
+
+#news-list-body p {
+	font-size: 175%;
+}
+
+#news-list-body a {
+	color: rgb(255,255,255);
 }
 
 #news-image {
@@ -75,6 +103,23 @@ body {
 	margin-top: 10px;
 	text-align: center;
 }
+
+#panel-news h1{
+	text-align: center;
+	color: rgb(255,255,255);
+}
+
+#backnews {
+	position: fixed;
+	filter: sepia(100%);
+	filter: brightness(60%);
+	width: 100%;
+	height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
 
 /*! Pàg. Sobre Nosaltres */
 
@@ -99,12 +144,39 @@ body {
 
 /*! Pàg. Contacte i Perfil Usuari*/
 
+#panel-backcontact img{
+	position: fixed;
+	filter: sepia(100%);
+	filter: brightness(60%);
+	width: 100%;
+	height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+#img-span {
+	background-color: rgb(130,0,0);
+	padding-bottom: 2px;
+}
+
 #panel-contact, #panel-profile {
 	margin-bottom: 5px;
 }
 
+#panel-contact h1 {
+	text-align: center;
+	color: rgb(255,255,255);
+}
+
 #panel-contact h5 {
 	text-align: center;
+	color: rgb(255,255,255);
+}
+
+#panel-contact form {
+	color: rgb(255,255,255);
+	font-size: 130%;
 }
 
 #panel-contact-top, #panel-profile-top {
@@ -116,23 +188,38 @@ body {
 /*! Usuari */
 
 #menu-inici {
-	margin-top: 12%;
+	margin-top: 90px;
+}
+
+#menu-inici-full {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
 }
 
 #menu-inici-nom{
-	margin-left: 35px;
+	text-align: center;
+}
+
+#menu-list {
+	margin-top: 45px;
 }
 
 #data-button, #profile-button, #download-button {
 	margin-bottom: 5px;
 }
 
-#entrar, h1{
+#entrar {
 	padding-top: 80px;
 	text-align: center;
+	background-color: rgb(255,255,255);
+	height: 853px;
 }
 
-#registre{
+#registre {
 	padding-top: 100px;
 }
 
@@ -142,7 +229,7 @@ body {
 	padding-bottom: 15px;
 }
 
-#resposta{
+#resposta, #registre_up {
 	margin-top: 180px;
 
 }
@@ -167,6 +254,8 @@ body {
 #resposta_a a{
 	text-decoration: none;
 }
+
+/*! Footer */
 
 #footer {
 	background-color: rgb(215, 208, 193);

@@ -1,22 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 {% block content %}
 {% include 'navbar.html' %}
-
-<div class="container" id="panel-contact">
-	<h1><strong>Contacte</strong></h1>
-	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-		</div>
-		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="panel-contact-top">		
-			<form method="POST" action="." enctype="multipart/form-data">{% csrf_token %}
-				{{ form|crispy }}
-				<h5><strong>(Els camps en asterisc són obligatoris.)</strong></h5>
-					<input type="submit" class="btn btn-success btn-block" value="Enviar">
-			</form>
-		</div>
-		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+<div class="container" id="panel-backcontact">
+	<img src="{% static 'img/contacte.jpg' %}">
+	<div class="container" id="panel-contact">
+		<h1><span class="label label-default" id="img-span"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span><br><strong>Contacte</strong></h1>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="panel-contact-top">		
+				<form method="POST" action="." enctype="multipart/form-data">{% csrf_token %}
+					{{ form|crispy }}
+					<h5><strong>(Els camps en asterisc són camps obligatoris!)</strong></h5>
+						<input type="submit" class="btn btn-success btn-block" value="Enviar">
+				</form>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			</div>
 		</div>
 	</div>
 </div>
