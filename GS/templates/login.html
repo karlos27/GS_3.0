@@ -1,44 +1,49 @@
 {% extends 'base.html' %}
-   {% block content %}
-    <div class="container-fluid" id="entrar">
-    <h1><strong>Gestoria</strong></h1>
+{% block content %}
+{% include 'not_navbar.html' %}
+<div class="container-fluid" id="entrar"> 	
+    <h1><strong>Inici de Sessió</strong></h1>
     	<div class="row">
-    		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
-    		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-			    <form method="POST">{% csrf_token %}
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-							<div class="form-group">
-								<label for="username">Usuari: </label>
-								<input type="text" name="username" class="form-control">
+    		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
+    		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    			<div class="panel panel-default" id="login">
+  					<div class="panel-body">
+					    <form method="POST">{% csrf_token %}
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+									<div class="form-group">
+										<label for="username">Usuari: </label>
+										<input type="text" name="username" class="form-control">
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-							<div class="form-group">
-								<label for="username">Contrasenya: </label>
-								<input type="password" name="password" class="form-control">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+									<div class="form-group">
+										<label for="username">Contrasenya: </label>
+										<input type="password" name="password" class="form-control">
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-							<div class="form-group">
-								<a href="{% url 'password_reset' %}">Recordar Contrasenya</a>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+									<div class="form-group">
+										<a href="{% url 'password_reset' %}">Recordar Contrasenya</a>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-							<div class="form-group">
-								<input type="submit" class="btn btn-success" value="Entrar">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+									<div class="form-group">
+										<input type="submit" class="btn btn-success" value="Entrar">
+									</div>
+								</div>
 							</div>
-						</div>
+						</form>
 					</div>
-				</form>
+				</div>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
 		</div>
-	</div>
-    {% endblock %}
+</div>
+{% endblock %}

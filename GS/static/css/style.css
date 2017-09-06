@@ -2,7 +2,6 @@
 
 body {
 	font-family: arial;
-	background-color: rgb(255, 246, 173);
 }
 
 h1 {
@@ -16,6 +15,14 @@ h1 {
 	background-color: rgb(130,0,0);
 	border-bottom: rgb(130,0,0);
 	font-family: verdana;
+}
+
+#not_navbar-header-top {
+	background-color: rgb(130,0,0);
+	border-bottom: rgb(130,0,0);
+	font-family: verdana;
+	color: rgb(255,255,255);
+	height: 100px;
 }
 
 #navbar-header-down {
@@ -57,7 +64,6 @@ h1 {
 /*! Pàg. Index i Notícies */
 
 #news-list {
-	background-color: rgb(255, 246, 173);
 	text-align: center;
 }
 
@@ -119,7 +125,6 @@ h1 {
     top: 0px;
     z-index: -1;
 }
-
 
 /*! Pàg. Sobre Nosaltres */
 
@@ -215,14 +220,25 @@ h1 {
 #entrar {
 	padding-top: 80px;
 	text-align: center;
-	background-color: rgb(255,255,255);
 	height: 853px;
 }
 
-#registre {
-	padding-top: 100px;
+#registre-full {
+	padding-top: 80px;
+	height: 853px;
 }
 
+#re-password {
+	padding-top: 80px;
+}
+
+#password_done, #password-confirm, #new_password {
+	padding-top: 180px;
+}
+
+#re-password-body {
+	margin-left: 95px;
+}
 
 #perfil {
 	padding-top: 30px;

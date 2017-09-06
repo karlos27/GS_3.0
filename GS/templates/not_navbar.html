@@ -1,0 +1,11 @@
+{% load static %}
+
+<nav class="navbar navbar-inverse navbar-fixed-top" id="not_navbar-header-top">
+  <div class="container-fluid">
+    {% if request.user.is_authenticated %}
+  		<a class="navbar-brand" href="{% url 'usuaris:inici' %}"><h2><strong>Nom Company, SL</strong></h2></a>
+    {% else %}
+    	<a class="navbar-brand" href="/"><h2><strong>Nom Company, SL</strong></h2></a>
+    {% endif %}
+  </div>
+</nav>
