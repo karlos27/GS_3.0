@@ -82,20 +82,7 @@ h1 {
 	border-top: solid 2px rgb(130,0,0);
 	padding-bottom: 50px;
 	color: rgb(0,0,0);
-}
-
-@media screen and (max-width: 768px){
-	#list-body h2{
-		font-size: 20px;
-	}
-
-	#list-body h4{
-		font-size: 15px;
-	}
-
-	#list-body {
-		font-size: 10px;
-	}
+	text-align: justify;
 }
 
 #list-body p {
@@ -119,6 +106,33 @@ h1 {
 #news-list-body a {
 	color: rgb(255,255,255);
 }
+
+@media screen and (max-width: 768px){
+	#list-body h2 {
+		font-size: 20px;
+	}
+
+	#list-body h4 {
+		font-size: 15px;
+	}
+
+	#list-body {
+		font-size: 8px;
+	}
+
+	#news-list-body h2 {
+		font-size: 20px;
+	}
+
+	#news-list-body h4 {
+		font-size: 15px;
+	}
+
+	#news-list-body {
+		font-size: 8px;
+	}
+}
+
 
 #news-image {
 	border-radius: 8px;
