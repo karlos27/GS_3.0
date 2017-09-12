@@ -10,36 +10,33 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      {% if request.user.is_authenticated %}
-      <a class="navbar-brand" href="{% url 'usuaris:inici' %}"><img src="{% static 'img/logo.jpg' %}" class="img-responsive" id="navbar-logo"></a>
-      {% else %}
-      <a class="navbar-brand" href="/"><img src="{% static 'img/logo.jpg' %}" class="img-responsive" id="navbar-logo"></a>
-      {% endif %}
+      <img src="{% static 'img/logo.jpg' %}" class="img-responsive" id="navbar-logo">  
     </div>
 <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav">
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'usuaris:inici' %}">Inici</a></li>
+        {% else %}
+        <li><a href="/">Inici</a></li>
+        {% endif %}
         <li><a href="{% url 'gestoria:map' %}">Sobre Nosaltres <span class="sr-only">(current)</span></a></li>
-        <li><a href="{% url 'gestoria:llistat' %}"> Notícies</a></li>
+        <li><a href="{% url 'gestoria:llistat' %}">Notícies</a></li>
         <li><a href="{% url 'gestoria:contacte' %}">Contacte</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="navbar-header-down">Usuaris <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            {% if request.user.is_authenticated %}
-            <li><a href="{% url 'usuaris:inici' %}" target="_self">Inici</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="{% url 'usuaris:perfil' %}" target="_self">Perfil</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="{% url 'logout' %}" onclick="surt();">Sortir</a></li>
-            {% else %}
-            <li><a href="{% url 'login' %}">Entrar</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="{% url 'usuaris:registre' %}">Registre</a></li>
-            {% endif %}
-          </ul>
-        </li>
+        {% if request.user.is_authenticated %}
+          <li><a href="{% url 'logout' %}" onclick="surt();"><span class="glyphicon glyphicon-off"></span></a></li>
+        {% else %}
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="navbar-header-down">Usuaris <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url 'login' %}">Entrar</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="{% url 'usuaris:registre' %}">Registre</a></li>
+            </ul>
+          </li>
+        {% endif %}
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

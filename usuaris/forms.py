@@ -16,12 +16,12 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email',)
-        labels = {'first_name':'Nom', 'last_name':'Cognoms', 'email':'Correu Electrònic Principal',}
+        labels = {'first_name':'Nom', 'last_name':'Cognoms', 'email':'Correu Electrònic',}
         widgets = {
         	'first_name':forms.TextInput(attrs={'class':'form-control'}),
         	'last_name':forms.TextInput(attrs={'class':'form-control'}),
             'email':forms.TextInput(attrs={'class':'form-control'}),
-        }
+        }    
 
 class PerfilForm(forms.ModelForm):
 	class Meta:
