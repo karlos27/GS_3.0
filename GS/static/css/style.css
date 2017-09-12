@@ -367,6 +367,12 @@ h1 {
 	text-decoration: none;
 }
 
+/*! Paginator */
+
+.pager a{
+	color: rgb(130,0,0);
+}
+
 /*! Footer */
 
 #footer {
